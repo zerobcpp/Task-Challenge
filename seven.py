@@ -3,7 +3,7 @@ import requests
 import hashlib
 
 def browers():
-    agent = {'User-Agent': '#/8.8'}
+    agent = {}
     response = requests.get(url='#/browser', headers=agent)
     print(response.json())
 
@@ -29,7 +29,7 @@ def sendRequest():
     s = file.read()
     s = s.split('\n')
     for i in s:
-        link = f'#/xception?q={i}'
+        link = ''
         response = req.urlopen(link)
         if 'raise' not in response.read().decode('utf-8'):
             print(i)
@@ -50,16 +50,13 @@ def hashQ():
 
         m = hashlib.md5(flag.encode('UTF-8'))
         # bug - m.udpate(i) = i + i + i + i
-        if i == 'caliber':
-            print(flag, i, salt)
-            print(m.hexdigest())
 
         if res == m.hexdigest():
             print('found', flag, i)
 
 
 def stream():
-    link = '#/stream'
+    link = ''
     i = 0
     c = {}
     while i < 120:
@@ -76,5 +73,5 @@ def stream():
 #generateString()
 #browers()
 #sendRequest()
-hashQ()
-#stream()
+#hashQ()
+stream()
