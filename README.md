@@ -1,2 +1,2 @@
 # someCTF
-Some CTF for some company
+Various challenges from some companies. 
