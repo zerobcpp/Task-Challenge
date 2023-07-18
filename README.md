@@ -1,2 +1,3 @@
-# someCTF
-Various challenges from some companies. 
+# Task/Challenges for various companies.
+
+Various challenges from x company. 
